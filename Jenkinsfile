@@ -76,7 +76,7 @@ pipeline {
                 parallel (
                     'docker login': {
                         withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
-                            sh "docker login -u comdevops -p ${dockerPassword}"
+                            sh "docker login -u sangeeth30 -p ${dockerPassword}"
                         }
                     },
                     'ui-web-app-reactjs': {
